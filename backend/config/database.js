@@ -1,11 +1,11 @@
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-    host: process.env.MYSQLHOST || "localhost",
-    port: process.env.MYSQLPORT || 3306,
-    user: process.env.MYSQLUSER || "root",
-    password: process.env.MYSQLPASSWORD || "Bopeva24@",
-    database: process.env.MYSQLDATABASE || "helpdesk_ti"
+    host: process.env.MYSQLHOST,
+    port: Number(process.env.MYSQLPORT),
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE
 });
 
 connection.connect((err) => {
