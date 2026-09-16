@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meus Chamados - HelpDesk TI</title>
+
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>HelpDesk TI</h2>
+                <span>Gestão de Chamados</span>
+            </div>
+
+            <nav>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="chamado.html">
+                    Abrir chamado
+                </a>
+
+                <a href="meus-chamados.html" class="active">
+                    Meus chamados
+                </a>
+
+                <a href="chamados-tecnico.html" id="menuChamadosTecnico" hidden>
+                    Chamados
+                </a>
+
+                <a href="admin.html" id="menuAdministracao" hidden>
+                    Administração
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" id="botaoSair">
+                    Sair
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h1>Meus chamados</h1>
+                    <p>Acompanhe os chamados que você abriu.</p>
+                </div>
+
+            </header>
+
+
+            <!-- FILTROS -->
+            <section class="filters">
+
+                <input
+                    type="text"
+                    id="searchTicket"
+                    placeholder="Pesquisar chamado..."
+                >
+
+                <select id="statusFilter">
+
+                    <option value="todos">
+                        Todos os status
+                    </option>
+
+                    <option value="aberto">
+                        Aberto
+                    </option>
+
+                    <option value="em_andamento">
+                        Em andamento
+                    </option>
+
+                    <option value="resolvido">
+                        Resolvido
+                    </option>
+
+                    <option value="fechado">
+                        Fechado
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- LISTA DE CHAMADOS -->
+            <section class="tickets-panel">
+
+                <div class="ticket-row ticket-header">
+
+                    <span>Nº</span>
+                    <span>Chamado</span>
+                    <span>Categoria</span>
+                    <span>Prioridade</span>
+                    <span>Status</span>
+                    <span>Ação</span>
+
+                </div>
+
+                <div id="ticketsList">
+
+                    <p>Carregando chamados...</p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="JS/menu.js"></script>
+    <script src="JS/meusChamados.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abrir Chamado - HelpDesk TI</title>
+
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>HelpDesk TI</h2>
+                <span>Gestão de Chamados</span>
+            </div>
+
+            <nav>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="chamado.html" class="active">
+                    Abrir chamado
+                </a>
+
+                <a href="meus-chamados.html">
+                    Meus chamados
+                </a>
+
+                <a href="chamados-tecnico.html" id="menuChamadosTecnico" hidden>
+                    Chamados
+                </a>
+
+                <a href="admin.html" id="menuAdministracao" hidden>
+                    Administração
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" id="botaoSair">
+                    Sair
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h1>Abrir chamado</h1>
+
+                    <p>
+                        Informe os detalhes do problema ou solicitação.
+                    </p>
+                </div>
+
+            </header>
+
+
+            <!-- FORMULÁRIO -->
+            <section class="form-panel">
+
+                <form id="ticketForm">
+
+                    <!-- TÍTULO -->
+                    <div class="form-group">
+
+                        <label for="title">
+                            Título do chamado
+                        </label>
+
+                        <input
+                            type="text"
+                            id="title"
+                            placeholder="Ex: Computador não liga"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CATEGORIA -->
+                    <div class="form-group">
+
+                        <label for="category">
+                            Categoria
+                        </label>
+
+                        <select id="category" required>
+
+                            <option value="">
+                                Selecione uma categoria
+                            </option>
+
+                            <option value="1">
+                                Hardware
+                            </option>
+
+                            <option value="2">
+                                Software
+                            </option>
+
+                            <option value="3">
+                                Rede / Internet
+                            </option>
+
+                            <option value="4">
+                                Acesso / Login
+                            </option>
+
+                            <option value="5">
+                                Outros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PRIORIDADE -->
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Prioridade inicial (opcional)
+                        </label>
+
+                        <select id="priority">
+
+                            <option value="">
+                                Selecione a prioridade
+                            </option>
+
+                            <option value="critica">
+                                Crítica
+                            </option>
+
+                            <option value="alta">
+                                Alta
+                            </option>
+
+                            <option value="media">
+                                Média
+                            </option>
+
+                            <option value="baixa">
+                                Baixa
+                            </option>
+
+                        </select>
+
+                        <small>
+                            O sistema analisar&aacute; a categoria, o t&iacute;tulo e a descri&ccedil;&atilde;o e definir&aacute; a prioridade final automaticamente.
+                        </small>
+
+                    </div>
+
+
+                    <!-- DESCRIÇÃO -->
+                    <div class="form-group">
+
+                        <label for="description">
+                            Descrição do problema
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="6"
+                            placeholder="Descreva o problema com o máximo de detalhes possível..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- BOTÕES -->
+                    <div class="form-actions">
+
+                        <a href="dashboard.html" class="cancel-button">
+                            Cancelar
+                        </a>
+
+                        <button type="submit">
+                            Abrir chamado
+                        </button>
+
+                    </div>
+
+
+                    <!-- MENSAGEM -->
+                    <p id="ticketMessage"></p>
+                    <p id="priorityAutomationMessage"></p>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="JS/menu.js"></script>
+    <script src="JS/chamados.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administra&ccedil;&atilde;o - HelpDesk TI</title>
+
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>HelpDesk TI</h2>
+                <span>Administra&ccedil;&atilde;o</span>
+            </div>
+
+            <nav>
+                <a href="admin.html" class="active">Administra&ccedil;&atilde;o</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="chamados-tecnico.html">Chamados</a>
+                <a href="index.html" id="botaoSair">Sair</a>
+            </nav>
+
+        </aside>
+
+        <main class="main-content admin-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>&Aacute;rea administrativa</h1>
+                    <p>Vis&atilde;o geral dos usu&aacute;rios, chamados e t&eacute;cnicos.</p>
+                </div>
+
+                <div class="user-info">
+                    <strong id="nomeAdministrador"></strong>
+                    <span id="tipoAdministrador"></span>
+                </div>
+            </header>
+
+            <section class="cards admin-cards">
+                <div class="card">
+                    <span>Total de chamados</span>
+                    <strong id="totalChamados">0</strong>
+                </div>
+                <div class="card">
+                    <span>Chamados abertos</span>
+                    <strong id="chamadosAbertos">0</strong>
+                </div>
+                <div class="card">
+                    <span>Em andamento</span>
+                    <strong id="chamadosEmAndamento">0</strong>
+                </div>
+                <div class="card">
+                    <span>Resolvidos</span>
+                    <strong id="chamadosResolvidos">0</strong>
+                </div>
+                <div class="card">
+                    <span>Fechados</span>
+                    <strong id="chamadosFechados">0</strong>
+                </div>
+            </section>
+
+            <section class="panel admin-panel">
+                <h2>Usu&aacute;rios</h2>
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usuariosTabela">
+                            <tr><td colspan="3">Carregando usu&aacute;rios...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel admin-panel">
+                <h2>Chamados</h2>
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>T&iacute;tulo</th>
+                                <th>Usu&aacute;rio</th>
+                                <th>T&eacute;cnico</th>
+                                <th>Categoria</th>
+                                <th>Prioridade</th>
+                                <th>Status</th>
+                                <th>Data de cria&ccedil;&atilde;o</th>
+                            </tr>
+                        </thead>
+                        <tbody id="chamadosTabela">
+                            <tr><td colspan="8">Carregando chamados...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel admin-panel">
+                <h2>T&eacute;cnicos</h2>
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Chamados atribu&iacute;dos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tecnicosTabela">
+                            <tr><td colspan="3">Carregando t&eacute;cnicos...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="JS/admin.js"></script>
+
+</body>
+
+</html>

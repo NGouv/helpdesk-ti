@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recuperar senha - HelpDesk TI</title>
+
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="login-header">
+                <h1>Recuperar senha</h1>
+                <p>Informe seu e-mail para iniciar a solicitação</p>
+            </div>
+
+            <form id="recoveryForm">
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <p id="recoveryMessage" role="status"></p>
+
+                <button type="submit">Solicitar recuperação</button>
+
+            </form>
+
+            <p class="register-prompt">
+                <a href="index.html">Voltar para o login</a>
+            </p>
+
+            <div class="login-footer">
+                <p>O envio automático de e-mail ainda depende de configuração do serviço de e-mail.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="JS/recuperarSenha.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamados - Técnico</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <h2>HelpDesk TI</h2>
+                <span>Área técnica</span>
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="chamados-tecnico.html" class="active">
+                    Chamados
+                </a>
+
+                <a href="chamado.html">
+                    Abrir chamado
+                </a>
+
+                <a href="meus-chamados.html">
+                    Meus chamados
+                </a>
+
+                <a href="#" id="botaoSair">
+                    Sair
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h1>Chamados</h1>
+                    <p>Gerencie os chamados dos usuários.</p>
+                </div>
+
+                <div>
+                    <strong id="nomeUsuario">Usuário</strong>
+                    <span id="tipoUsuario"></span>
+                </div>
+
+            </header>
+
+            <section class="content">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Todos os chamados</h2>
+                        <p>Chamados registrados no sistema.</p>
+                    </div>
+
+                </div>
+
+                <div id="ticketsList">
+
+                    <p>Carregando chamados...</p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="JS/chamadosTecnico.js"></script>
+
+</body>
+
+</html>
