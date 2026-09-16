@@ -1,3 +1,4 @@
+const net = require("net");
 const mysql = require("mysql2");
 
 const pool = mysql.createPool({
@@ -8,7 +9,12 @@ const pool = mysql.createPool({
     database: process.env.MYSQLDATABASE,
     waitForConnections: true,
     connectionLimit: 10,
-    queueLimit: 0
+    queueLimit: 0,
+    stream: () => net.createConnection({
+        host: process.env.MYSQLHOST,
+        port: Number(process.env.MYSQLPORT),
+        family: 4
+    })
 });
 
 module.exports = pool;

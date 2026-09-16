@@ -44,9 +44,16 @@ loginForm.addEventListener("submit", async function (event) {
 
         loginMessage.textContent = dados.mensagem;
 
-        // Vai para o dashboard
+        const paginasPorTipo = {
+            usuario: "dashboard.html",
+            tecnico: "chamados-tecnico.html",
+            administrador: "admin.html"
+        };
+
+        const paginaInicial = paginasPorTipo[dados.usuario.tipo] || "dashboard.html";
+
         setTimeout(() => {
-            window.location.href = "dashboard.html";
+            window.location.href = paginaInicial;
         }, 500);
 
     } catch (erro) {
