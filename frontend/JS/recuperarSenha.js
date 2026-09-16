@@ -12,7 +12,7 @@ recoveryForm.addEventListener("submit", async (event) => {
     }
 
     try {
-        const resposta = await fetch("http://localhost:3000/api/recuperar-senha", {
+        const resposta = await fetch("https://abundant-freedom-production-d9e7.up.railway.app/api/recuperar-senha", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

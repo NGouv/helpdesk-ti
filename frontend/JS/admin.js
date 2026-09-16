@@ -21,7 +21,7 @@ if (!usuarioSalvo) {
     }
 }
 
-const apiBase = "http://localhost:3000/api/admin";
+const apiBase = "https://abundant-freedom-production-d9e7.up.railway.app/api/admin";
 
 const textosStatus = {
     aberto: "Aberto",

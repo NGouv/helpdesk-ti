@@ -87,7 +87,7 @@ const carregarDashboard = async () => {
 
     try {
         const resposta = await fetch(
-            `http://localhost:3000/api/dashboard?usuario_id=${usuarioAtual.id}`,
+            `https://abundant-freedom-production-d9e7.up.railway.app/api/dashboard?usuario_id=${usuarioAtual.id}`,
             { cache: "no-store" }
         );
         const dados = await resposta.json();

@@ -285,7 +285,7 @@ async function carregarChamado() {
     try {
 
         const resposta = await fetch(
-            `http://localhost:3000/api/chamados/${chamadoId}?usuario_id=${usuario.id}`
+            `https://abundant-freedom-production-d9e7.up.railway.app/api/chamados/${chamadoId}?usuario_id=${usuario.id}`
         );
 
         const chamado =
@@ -461,7 +461,7 @@ async function executarAcao(acao) {
     try {
 
         const resposta = await fetch(
-            `http://localhost:3000/api/chamados/${chamadoId}/assumir`,
+            `https://abundant-freedom-production-d9e7.up.railway.app/api/chamados/${chamadoId}/assumir`,
             {
                 method: "PUT",
 
@@ -517,7 +517,7 @@ async function atualizarStatus(novoStatus) {
     try {
 
         const resposta = await fetch(
-            `http://localhost:3000/api/chamados/${chamadoId}/status`,
+            `https://abundant-freedom-production-d9e7.up.railway.app/api/chamados/${chamadoId}/status`,
             {
                 method: "PUT",
 

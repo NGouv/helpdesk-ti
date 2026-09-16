@@ -25,7 +25,7 @@ async function carregarChamados() {
     try {
 
         const resposta = await fetch(
-            `http://localhost:3000/api/chamados/usuario/${usuario.id}?usuario_id=${usuario.id}`,
+            `https://abundant-freedom-production-d9e7.up.railway.app/api/chamados/usuario/${usuario.id}?usuario_id=${usuario.id}`,
             { cache: "no-store" }
         );
 
