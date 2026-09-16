@@ -7,7 +7,7 @@ const chamadoRoutes = require("./routes/chamadoRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // ==============================
